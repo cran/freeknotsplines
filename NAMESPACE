@@ -1,0 +1,2 @@
+useDynLib(freeknotsplines)
+export(freelsgen, freepsgen, freelsgold, freepsgold, coef.freekt, fitted.freekt, residuals.freekt, plot.freekt, summary.freekt, AIC.freekt, AICc.freekt, BIC.freekt, adjGCV.freekt, adjAIC.freekt, fit.search.numknots)
