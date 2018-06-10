@@ -1,7 +1,17 @@
+#' @export coef freekt
+#' @export fitted freekt
+#' @export residuals freekt
+#' @export plot freekt
+#' @export summary freekt
+#' @export AIC freekt
+#' @export AICc freekt
+#' @export BIC freekt
+#' @export adjGCV freekt
+#' @export adjAIC freekt
+
 library(splines)
 
-setClass("freekt", 
-    representation(x = "numeric", y = "numeric", degree = "integer",
+setClass("freekt", slots = c(x = "numeric", y = "numeric", degree = "integer",
     seed = "integer", stream = "integer", lambda = "numeric",
     optknot = "numeric", tracehat = "numeric", GCV = "numeric",
     GSJS = "numeric", call = "call"))
@@ -261,7 +271,7 @@ fit.search.numknots <- function(x, y, degree, minknot = 1, maxknot = 5,
   {
       currcall <- call(funcname, x, y, degree, numknot, seed, stream)
       currfit <- eval(currcall)
-      currcrit <- switch(knotnumcrit, GCV = currfit$GCV, 
+      currcrit <- switch(knotnumcrit, GCV = currfit@GCV, 
           AIC = AIC(currfit, k = k), adjAIC = adjAIC.freekt(currfit),
           AICc = AICc.freekt(currfit), BIC = BIC(currfit), 
           adjGCV = adjGCV.freekt(currfit, d))

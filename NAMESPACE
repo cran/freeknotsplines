@@ -1,2 +1,21 @@
 useDynLib(freeknotsplines)
+import(splines)
+importFrom("graphics", "lines", "plot")
+importFrom("methods", "new")
+importFrom("stats", "AIC", "BIC", "residuals")
 export(freelsgen, freepsgen, freelsgold, freepsgold, coef.freekt, fitted.freekt, residuals.freekt, plot.freekt, summary.freekt, AIC.freekt, AICc.freekt, BIC.freekt, adjGCV.freekt, adjAIC.freekt, fit.search.numknots)
+S3method(coef, freekt)
+S3method(fitted, freekt)
+S3method(residuals, freekt)
+S3method(plot, freekt)
+S3method(summary, freekt)
+S3method(AIC, freekt)
+S3method(BIC, freekt)
+
+
+
+
+
+
+
+

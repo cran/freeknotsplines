@@ -48,7 +48,7 @@ truey <- x*sin(10*x)
 set.seed(10556)
 y <- truey + rnorm(31, 0, 0.2)
 xy.freekt <- freelsgen(x, y, degree = 2, numknot = 2, 555)
-fitted(xy.freekt)
+fitted.freekt(xy.freekt)
 }
 
 \keyword{

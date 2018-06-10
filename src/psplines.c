@@ -972,7 +972,7 @@ label_21: nbndm1 = nbands - 1;
 		 for(j=1; j<= jmax; j++){
             b[j+n] = b[j+n] - w[j+1][n]*b[n];
 		}
-label_30:     n=n;
+label_30:   ;  /*n=n;  this statement caused warnings */
 		  }
 /*
 c     backsubstitution. solve l-transp.x = d**(-1)*y  for x, store in b.
@@ -1084,7 +1084,7 @@ label_15:    w[1][n] = 1./w[1][n];
             jmax = jmax - 1;
             w[i+1][n] = ratio;
 		 }
-label_20:    n=n; 
+label_20:  ;  /* n=n; this statement caused warnings */
 	}
 return;
     
